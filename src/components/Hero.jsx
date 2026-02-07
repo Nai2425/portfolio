@@ -112,13 +112,13 @@ const Hero = () => {
               >
                 Contact Me
               </a>
-              <button
+              {/* <button
                 onClick={handleView}
                 className="px-8 py-3 border border-secondary rounded-lg font-semibold hover:bg-secondary/10 transition-colors duration-300 flex items-center gap-2"
               >
                 <FaEye size={18} />
                 View Resume
-              </button>
+              </button>*/}
               <button
                 onClick={handleDownload}
                 className="px-8 py-3 border border-secondary rounded-lg font-semibold hover:bg-secondary/10 transition-colors duration-300 flex items-center gap-2"
