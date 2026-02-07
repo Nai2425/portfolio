@@ -1,15 +1,33 @@
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaDownload,
+  FaEye,
+} from "react-icons/fa";
 
 const Hero = () => {
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/resume.pdf";
-    link.download = "/portfolio/files/Villadarez_Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const handleDownload = async () => {
+    try {
+      const response = await fetch("/portfolio/files/Villadarez_Resume.pdf");
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "Ian_Beach_M_Villadarez_Resume.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error("Download failed:", error);
+    }
+  };
+
+  const handleView = () => {
+    window.open("/portfolio/files/Villadarez_Resume.pdf", "_blank");
   };
 
   return (
@@ -94,6 +112,13 @@ const Hero = () => {
               >
                 Contact Me
               </a>
+              <button
+                onClick={handleView}
+                className="px-8 py-3 border border-secondary rounded-lg font-semibold hover:bg-secondary/10 transition-colors duration-300 flex items-center gap-2"
+              >
+                <FaEye size={18} />
+                View Resume
+              </button>
               <button
                 onClick={handleDownload}
                 className="px-8 py-3 border border-secondary rounded-lg font-semibold hover:bg-secondary/10 transition-colors duration-300 flex items-center gap-2"
