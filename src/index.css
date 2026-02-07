@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #0ea5e9;
+    --color-secondary: #8b5cf6;
+    --color-dark: #0f172a;
+    --color-darker: #020617;
+}
+
+@layer base {
+    body {
+        @apply bg-darker text-white;
+    }
+}
+
+@layer components {
+    .section {
+        @apply max-w-6xl mx-auto px-4 py-16 md:py-24;
+    }
+
+    .gradient-text {
+        @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+    }
+}
