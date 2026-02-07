@@ -6,7 +6,7 @@ const Hero = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = "/resume.pdf";
-    link.download = "/portfolio/Villadarez_Resume.pdf";
+    link.download = "/portfolio/files/Villadarez_Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
