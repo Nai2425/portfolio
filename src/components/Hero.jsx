@@ -6,7 +6,7 @@ const Hero = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = "/resume.pdf";
-    link.download = "Villadarez_Resume.pdf";
+    link.download = "/portfolio/Villadarez_Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -114,7 +114,7 @@ const Hero = () => {
             <div className="w-80 h-80 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center backdrop-blur-sm">
               <div className="w-72 h-72 bg-darker rounded-full flex items-center justify-center text-6xl gradient-text font-bold">
                 <img
-                  src="/images/profile.png"
+                  src="/portfolio/images/profile.png"
                   alt="Villadarez"
                   className="w-80 h-80 rounded-full object-cover border-4"
                 />

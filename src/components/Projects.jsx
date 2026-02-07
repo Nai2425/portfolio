@@ -11,7 +11,7 @@ const Projects = () => {
       tech: ["PHP", "MYSQL", "Javascript"],
       github: "#",
       demo: "#",
-      image: "/images/babyweb.png",
+      image: "/portfolio/images/babyweb.png",
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ const Projects = () => {
       tech: ["VB.net", "MySQL"],
       github: "#",
       demo: "#",
-      image: "/images/babydesktop.png",
+      image: "/portfolio/images/babydesktop.png",
     },
     {
       id: 3,
@@ -31,7 +31,7 @@ const Projects = () => {
       tech: ["Flutter"],
       github: "#",
       demo: "#",
-      image: "/images/babymobile.jpg",
+      image: "/portfolio/images/babymobile.jpg",
     },
     {
       id: 4,
@@ -41,7 +41,7 @@ const Projects = () => {
       tech: ["PHP", "REST API"],
       github: "#",
       demo: "#",
-      image: "/images/telegram.png",
+      image: "/portfolio/images/telegram.png",
     },
   ];
 
