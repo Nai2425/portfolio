@@ -43,6 +43,16 @@ const Projects = () => {
       demo: "#",
       image: "/portfolio/images/telegram.png",
     },
+    {
+      id: 5,
+      title: "Pokedex",
+      description:
+        "interactive web application that brings the world of Pokémon to your browser. ",
+      tech: ["REACT", "REST API", "PokéAPI"],
+      github: "#",
+      demo: "#",
+      image: "/portfolio/images/pokedex.png",
+    },
   ];
 
   return (
